@@ -10,6 +10,8 @@ class HomeViewModel {
     }
 
     parseCsv() {
+        csv.RELAXED = true;
+        csv.IGNORE_QUOTES = true;
         csv.COLUMN_SEPARATOR = '\t';
         const csvParsed = csv.parse(this.csvText());
         console.log(csvParsed);
